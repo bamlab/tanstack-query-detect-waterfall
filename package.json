@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "build": "tsup"
+  },
+  "packageManager": "yarn@4.2.2",
+  "devDependencies": {
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5"
+  }
+}
