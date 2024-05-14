@@ -1,7 +1,25 @@
 {
+  "name": "@bam.tech/tanstack-query-detect-waterfall",
+  "version": "0.0.1",
+  "description": "Detect waterfall queries in TanStack",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bamlab/tanstack-query-detect-waterfall.git"
+  },
   "scripts": {
     "build": "tsup"
   },
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.cjs",
+      "require": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "license": "MIT",
   "packageManager": "yarn@4.2.2",
   "devDependencies": {
     "tsup": "^8.0.2",

@@ -5,6 +5,15 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
+"@bam.tech/tanstack-query-detect-waterfall@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@bam.tech/tanstack-query-detect-waterfall@workspace:."
+  dependencies:
+    tsup: "npm:^8.0.2"
+    typescript: "npm:^5.4.5"
+  languageName: unknown
+  linkType: soft
+
 "@esbuild/aix-ppc64@npm:0.19.12":
   version: 0.19.12
   resolution: "@esbuild/aix-ppc64@npm:0.19.12"
@@ -1552,15 +1561,6 @@ __metadata:
   checksum: 10c0/4fa6644e5c7fc4a34f654ea7e209be6c2c5897ed9dd43e7135230137204df748a795c7553804130f6c41da0b71e83f8c35a4a7881d385a77996adee50b609a6e
   languageName: node
   linkType: hard
-
-"root-workspace-0b6124@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "root-workspace-0b6124@workspace:."
-  dependencies:
-    tsup: "npm:^8.0.2"
-    typescript: "npm:^5.4.5"
-  languageName: unknown
-  linkType: soft
 
 "run-parallel@npm:^1.1.9":
   version: 1.2.0
