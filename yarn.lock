@@ -15,7 +15,7 @@ __metadata:
     tsup: "npm:^8.0.2"
     typescript: "npm:^5.4.5"
   peerDependencies:
-    "@tanstack/query-core": ~5
+    "@tanstack/query-core": ~4
   languageName: unknown
   linkType: soft
 
