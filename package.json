@@ -9,12 +9,12 @@
   "scripts": {
     "build": "tsup"
   },
-  "main": "dist/index.cjs",
+  "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.cjs",
+      "import": "./dist/index.js",
       "require": "./dist/index.mjs",
       "types": "./dist/index.d.ts"
     }
