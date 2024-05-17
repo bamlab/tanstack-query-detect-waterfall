@@ -1,6 +1,6 @@
 {
   "name": "@bam.tech/tanstack-query-detect-waterfall",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "Detect waterfall queries in TanStack",
   "repository": {
     "type": "git",
@@ -31,6 +31,6 @@
     "typescript": "^5.4.5"
   },
   "peerDependencies": {
-    "@tanstack/query-core": "~5"
+    "@tanstack/query-core": "~4"
   }
 }

@@ -40,10 +40,10 @@ export class WaterfallQueryDetector {
   }
 
   // This function is used to check if a waterfall is whitelisted
-  private isWhiteListed(waterfall: Waterfall) {
+  private isWhiteListed(waterfall: Waterfall): boolean {
     if (!this.options.whitelist) return false;
 
-    this.options.whitelist.some((entry) => {
+    return this.options.whitelist.some((entry) => {
       return matchQuery({ queryKey: entry.from }, waterfall.from) && matchQuery({ queryKey: entry.to }, waterfall.to);
     });
   }
@@ -97,17 +97,17 @@ export class WaterfallQueryDetector {
 
     console.log(
       `Detected query waterfalls: 
-        ${formattedWaterfalls}
+${formattedWaterfalls}
         
-      This can lead to performance issues.
+This can lead to performance issues.
 
-      If you REALLY think it's normal, you can whitelist this waterfall.
+If you REALLY think it's normal, you can whitelist this waterfall.
 
-      Otherwise, try these tips to fix it:
-      - If the backend allows it, try batching the queries together in a single query.
-      - Do not call two \`useSuspenseQuery\` in the same component, or in a parent and a child. Instead, call your hooks as low as possible in your React tree, closer to where you need it. Reorganize your components if needed. Note: won't work with React 19, see https://github.com/facebook/react/pull/26380
-      - Try \`useQueries\` / \`useSuspenseQueries\` to fetch several queries in parallel.
-      - As a last resort, use \`queryClient.prefetchQuery\` to fetch data ahead of time
+Otherwise, try these tips to fix it:
+- If the backend allows it, try batching the queries together in a single query.
+- Do not call two \`useSuspenseQuery\` in the same component, or in a parent and a child. Instead, call your hooks as low as possible in your React tree, closer to where you need it. Reorganize your components if needed. Note: won't work with React 19, see https://github.com/facebook/react/pull/26380
+- Try \`useQueries\` / \`useSuspenseQueries\` to fetch several queries in parallel.
+- As a last resort, use \`queryClient.prefetchQuery\` to fetch data ahead of time
 `
     );
   }
