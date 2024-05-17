@@ -95,7 +95,7 @@ export class WaterfallQueryDetector {
       .map((waterfall) => `${waterfall.from.queryHash} --> ${waterfall.to.queryHash}`)
       .join("\n");
 
-    console.log(
+    console.warn(
       `Detected query waterfalls: 
 ${formattedWaterfalls}
         
