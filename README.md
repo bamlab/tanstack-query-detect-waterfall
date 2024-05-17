@@ -7,20 +7,33 @@ If multiple queries are run in sequence instead of parallel, the plugin will war
 # Example
 
 ```ts
+const queryClient = new QueryClient();
+
 if (__DEV__) {
-  const { trackQueryWaterfalls } = require("@bamlab/tanstack-query-detect-waterfall");
-  trackQueryWaterfalls();
+  const { detectQueryWaterfalls } = require("@bam.tech/tanstack-query-detect-waterfall");
+  detectQueryWaterfalls(queryClient);
 }
+```
+
+If you need to ignore dependent queries, you can do:
+
+```ts
+detectQueryWaterfalls(queryClient, {
+  whitelist: [
+    { from: ["myquerykey", 1], to: ["otherquerykey", 2] },
+    { from: ["yetanotherquerykey"], to: ["andalastone"] },
+  ],
+});
 ```
 
 # Installation
 
 ```bash
-npm install @bamlab/tanstack-query-detect-waterfall --save-dev
+npm install @bam.tech/tanstack-query-detect-waterfall --save-dev
 # or
-pnpm add @bamlab/tanstack-query-detect-waterfall --dev
+pnpm add @bam.tech/tanstack-query-detect-waterfall --dev
 # or
-yarn add @bamlab/tanstack-query-detect-waterfall --dev
+yarn add @bam.tech/tanstack-query-detect-waterfall --dev
 # or
-bun add @bamlab/tanstack-query-detect-waterfall --dev
+bun add @bam.tech/tanstack-query-detect-waterfall --dev
 ```
