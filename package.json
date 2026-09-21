@@ -31,6 +31,6 @@
     "typescript": "^5.4.5"
   },
   "peerDependencies": {
-    "@tanstack/query-core": "~4"
+    "@tanstack/query-core": ">=4 <6"
   }
 }
