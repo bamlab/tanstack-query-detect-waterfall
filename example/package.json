@@ -1,0 +1,25 @@
+{
+  "name": "waterfall-detector-example",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "dependencies": {
+    "@bam.tech/tanstack-query-detect-waterfall": "file:..",
+    "@tanstack/react-query": "^5.103.2",
+    "expo": "~57.0.24",
+    "expo-status-bar": "~57.0.1",
+    "lodash": "^4.18.1",
+    "react": "19.2.3",
+    "react-native": "0.86.3"
+  },
+  "devDependencies": {
+    "@types/react": "~19.2.2",
+    "typescript": "~6.0.3"
+  },
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+  },
+  "private": true
+}

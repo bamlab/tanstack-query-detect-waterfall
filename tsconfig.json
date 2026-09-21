@@ -105,5 +105,7 @@
     /* Completeness */
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
-  }
+  },
+  /* The example app is its own project with its own tsconfig. */
+  "exclude": ["example", "dist", "node_modules"]
 }

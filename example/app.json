@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "name": "waterfall-detector-example",
+    "slug": "waterfall-detector-example",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true
+    }
+  }
+}
