@@ -7,7 +7,9 @@
     "url": "git@github.com:bamlab/tanstack-query-detect-waterfall.git"
   },
   "scripts": {
-    "build": "tsup"
+    "build": "tsup",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
   },
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -26,11 +28,13 @@
   },
   "devDependencies": {
     "@tanstack/query-core": "~5",
+    "@tanstack/query-core-v4": "npm:@tanstack/query-core@^4",
     "@types/lodash": "~4",
     "tsup": "^8.0.2",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "vitest": "^3"
   },
   "peerDependencies": {
-    "@tanstack/query-core": "~4"
+    "@tanstack/query-core": ">=4 <6"
   }
 }

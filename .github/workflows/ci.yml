@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    name: query-core v${{ matrix.query-core }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        query-core: [4, 5]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Enable corepack
+        run: corepack enable
+
+      - name: Install
+        run: yarn install --immutable
+
+      - name: Typecheck
+        run: yarn typecheck
+
+      - name: Build
+        run: yarn build
+
+      # Each matrix leg runs the same suite against one major: the `query-core-v4`
+      # vitest project resolves `@tanstack/query-core` to the v4 alias dependency.
+      - name: Test
+        run: yarn vitest run --project query-core-v${{ matrix.query-core }}

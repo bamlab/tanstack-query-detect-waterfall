@@ -37,3 +37,5 @@ yarn add @bam.tech/tanstack-query-detect-waterfall --dev
 # or
 bun add @bam.tech/tanstack-query-detect-waterfall --dev
 ```
+
+Works with both TanStack Query v4 and v5: the detector handles the `loading` (v4) and `pending` (v5) query statuses.
